@@ -1,0 +1,52 @@
+:root {
+    --vert-sapin: #2d5a27;
+    --orange: #f48132;
+    --fond: #f2f1ee;
+    --blanc: #ffffff;
+}
+
+* { box-sizing: border-box; transition: all 0.3s ease; }
+body { font-family: 'Segoe UI', sans-serif; background: var(--fond); margin: 0; }
+
+/* Logo Arrondi */
+.logo-box img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--vert-sapin);
+    object-fit: cover;
+}
+
+/* Layout Dashboard */
+.app-container { display: flex; flex-direction: column; min-height: 100vh; }
+
+@media (min-width: 768px) {
+    .app-container { flex-direction: row; }
+    .sidebar { width: 260px; background: var(--blanc); border-right: 1px solid #ddd; }
+}
+
+.main-content { flex: 1; padding: 20px; }
+
+/* Cartes de statistiques fluides */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: var(--blanc);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.alert-btn {
+    background: var(--orange);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+}
